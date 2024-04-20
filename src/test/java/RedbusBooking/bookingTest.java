@@ -11,10 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class bookingTest {
 
 	public static void main(String[] args) {
-		ChromeOptions options = new ChromeOptions();
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver;
+		String browserName ="chrome"
+		if(browserName.equals("chrome")){
+			ChromeOptions options = new ChromeOptions();
+			driver = new ChromeDriver(options);
+		}
 		driver.get("https://www.redbus.in/");
-		driver.manage().window().maximize();
+		driver.manage().window().setDimension(new Dimension(1444,990));
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
