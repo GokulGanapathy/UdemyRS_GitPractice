@@ -15,10 +15,10 @@ public class bookingTest {
 		String browserName ="chrome"
 		if(browserName.equals("chrome")){
 			ChromeOptions options = new ChromeOptions();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		}
 		driver.get("https://www.redbus.in/");
-		
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.findElement(By.id("src")).sendKeys("Kovilpatti");
