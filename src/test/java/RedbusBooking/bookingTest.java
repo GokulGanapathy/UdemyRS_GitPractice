@@ -15,10 +15,9 @@ public class bookingTest {
 		String browserName ="chrome"
 		if(browserName.equals("chrome")){
 			ChromeOptions options = new ChromeOptions();
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
 		}
 		driver.get("https://www.redbus.in/");
-		driver.manage().window().setDimension(new Dimension(1444,990));
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
